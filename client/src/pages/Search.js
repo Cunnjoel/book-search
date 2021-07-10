@@ -43,6 +43,7 @@ function Search(props) {
                 </h2>
                 {books.map(book => (
                     <BookCard
+                    // updateSavedBooks
                         // removeBook={this.removeBook}
                         id={book.id}
                         key={book.id}

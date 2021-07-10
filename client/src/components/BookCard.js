@@ -1,18 +1,36 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
+import axios from "axios";
 
 function BookCard(props) {
+
+  const saveBooks = () => {
+    axios.post("/api/books", {
+      title: props.title,
+      authors: props.author,
+      description: props.description,
+      image: props.image,
+      link: props.link
+    }).then((book) => {
+      // update the allSavedBooks state
+      // props.updateSavedBooks(book.data)
+      window.alert("Book as been saved successfully!")
+    })
+  }
+
   return (
     <div className="card">
-        <Button variant="outline-dark">View</Button>
-        <Button variant="outline-dark">Save</Button>
+      <div>
+        <Button href={props.link} variant="outline-dark">View</Button>
+        <Button variant="success" onClick={saveBooks} >Save</Button>
+      </div>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Title:</strong> <a href={props.link}>{props.title}</a>
+            <strong>Title:</strong> {props.title}
           </li>
           <li>
             <strong>Author:</strong> {props.author}
