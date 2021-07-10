@@ -26,14 +26,14 @@ function SaveCard(props) {
   return (
     <div className="card">
         <Button variant="outline-dark" href={props.link}>View</Button>
-        <Button variant="outline-dark" onClick={() => deleteBook(props._id)}>Delete</Button>
+        <Button variant="outline-dark" onClick={() => deleteBook(props.id)}>Delete</Button>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Title:</strong> <a href={props.link}>{props.title}</a>
+            <strong>Title:</strong>{props.title}
           </li>
           <li>
             <strong>Author:</strong> {props.author}

@@ -13,8 +13,8 @@ function Save(props) {
             <div>
                 {props.books.map(book => (
                     <SaveCard
-                        id={book.id}
-                        key={book.id}
+                        id={book._id}
+                        key={book._id}
                         title={book.title}
                         author={book.authors}
                         description={book.description}
