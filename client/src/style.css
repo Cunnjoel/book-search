@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    /* background-image: url("./assets/images/bookshelf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    color: purple;
+    
+}
+

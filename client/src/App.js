@@ -5,14 +5,15 @@ import Save from "./pages/Save";
 import Search from "./pages/Search";
 import "./App.css";
 import axios from "axios";
+import './style.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      allSavedBooks: []
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     allSavedBooks: []
+  //   }
+  // }
 
   // function that handles the update of allSavedbooks
   // updateSavedBooks(newBook) {
@@ -21,29 +22,24 @@ class App extends Component {
   //   })
   // }
 
-  componentDidMount() {
-    axios.get("/api/books")
-    .then((books) => {
-      console.log(books.data)
-        this.setState({
-          allSavedBooks: books.data
-        })
-    })
-  }
+  // componentDidMount() {
+  //   axios.get("/api/books")
+  //   .then((books) => {
+  //     console.log(books.data)
+  //       this.setState({
+  //         allSavedBooks: books.data
+  //       })
+  //   })
+  // }
 
 
   render() {
     return (
       <Router>
         <div>
-          <Header />
+          <Header className = "header"/>
           <Route exact path="/" component={Search} />
-          <Route exact path="/save" component={() => {
-            return (
-            <Save 
-              books={this.state.allSavedBooks}
-            />)
-          }} />
+          <Route exact path="/save" component={Save} />
         </div>
       </Router>
 
