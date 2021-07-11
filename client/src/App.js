@@ -5,6 +5,7 @@ import Save from "./pages/Save";
 import Search from "./pages/Search";
 import "./App.css";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 class App extends Component {

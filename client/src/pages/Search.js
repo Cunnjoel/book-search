@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import BookCard from "../components/BookCard";
 import API from "../utils/API"
+import Card from 'react-bootstrap/Card'
+
+const styles = {
+    center: {
+        justifyContent: "center",
+        textAlign: "center"
+    },
+    color: {
+        color: "white"
+    }
+};
 
 function Search(props) {
 
@@ -18,7 +29,7 @@ function Search(props) {
     }
     return (
         <div>
-            <div>
+            <Card border="dark" style={{ width: '18rem' }} style={styles.center}>
                 <h2>
                     Book Search
                 </h2>
@@ -36,9 +47,9 @@ function Search(props) {
                         type="button"
                     >Search</button>
                 </form>
-            </div>
+            </Card>
             <div>
-                <h2>
+                <h2 style={styles.color}>
                     Results
                 </h2>
                 {books.map(book => (

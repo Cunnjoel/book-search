@@ -5,10 +5,10 @@
 body{
     display: flex;
     margin: 10px;
-    justify-content: center;
-    /* background-image: url("./assets/images/bookshelf.jpg");
+    /* justify-content: center; */
+    background-image: url("./assets/images/bookshelf.jpg");
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     color: purple;
     
 }

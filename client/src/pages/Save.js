@@ -3,6 +3,11 @@ import SaveCard from "../components/SaveCard";
 import axios from "axios";
 import API from "../utils/API"
 
+const styles = {
+    color: {
+        color: "white"
+    }
+};
 function Save(props) {
 
     const [books, setBooks] = useState([])
@@ -27,7 +32,7 @@ function Save(props) {
     return (
         <div>
             <div>
-                <h2>
+                <h2 style={styles.color}>
                     Saved Book
                 </h2>
             </div>

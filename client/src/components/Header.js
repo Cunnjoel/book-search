@@ -4,7 +4,8 @@ import Card from 'react-bootstrap/Card'
 
 const styles = {
     center: {
-        justifyContent: "center"
+        justifyContent: "center",
+        textAlign: "center"
     }
 };
 
@@ -12,7 +13,7 @@ function Header() {
     const location = useLocation();
 
     return (
-        <Card border="dark" style={{ width: '18rem' }}style={styles.center}>
+        <Card border="dark" style={{ width: '18rem' }} style={styles.center}>
                 <ul>
                     <li>
                         <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
