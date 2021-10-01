@@ -21,7 +21,7 @@ function Search(props) {
         console.log(query.current.value)
         try {
             const search = await API.search(query.current.value)
-            console.log(search)
+            console.log(query.current.value)
             setBooks(search.data.items)
         } catch (err) { console.log(err) }
 
